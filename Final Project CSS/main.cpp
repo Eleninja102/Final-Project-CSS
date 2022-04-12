@@ -44,16 +44,22 @@ int main(int argc, const char * argv[]) {
                         }else{
                             cout << i << ". " << CharactersLists[i].getNameList() << endl;
                         }
+                        
                     }
                     cin >> selectList;
                     
                     if(selectList == CharactersLists.size()){
+                        char question;
                         cin.ignore();
                         cout << "List Name: ";
                         getline(cin, listName);
-                        characters x (listName);
-                        x = CharactersLists[0];
-                        CharactersLists.push_back(x);
+                        characters newList (listName);
+                        cout << "Copy Default List (Y/N)";
+                        cin >> question;
+                        if(question == 'Y' || question == 'y'){
+                            newList = CharactersLists[0];
+                        }
+                        CharactersLists.push_back(newList);
                         notSelected = true;
                     }else if(selectList > CharactersLists.size()){
                         selectList = 1;
