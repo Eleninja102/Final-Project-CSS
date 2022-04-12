@@ -14,10 +14,13 @@
 #include <map>
 #include <stdlib.h>
 #include <time.h>
+#include <string>
+
 using namespace std;
 
 class ChacterDetail{
 public:
+    ChacterDetail(string Name, int Health, int Defence, int specialAttack, int specialDefence, int Speed, int Damage);
     ChacterDetail(string Name, int Health, int Defence, int specialAttack, int specialDefence, int Speed, int Damage, int Level);
     int getHealth();
     int getLevel();
@@ -28,7 +31,11 @@ public:
     int getSpeed();
     int getAttack();
     string getName();
+    void newName(string rename);
     friend ostream & operator<< (ostream& os, ChacterDetail& c);
+    void setLevel(int level);
+    void incrementLevel();
+    
 
     
 private:

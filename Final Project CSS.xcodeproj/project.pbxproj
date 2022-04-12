@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1DAFA1772804AEFE003859C9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DAFA1762804AEFE003859C9 /* main.cpp */; };
 		1DAFA17F2804AF19003859C9 /* Character Details.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DAFA17D2804AF19003859C9 /* Character Details.cpp */; };
+		1DAFA1822805061E003859C9 /* Character List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DAFA1802805061E003859C9 /* Character List.cpp */; };
+		1DAFA1852805233F003859C9 /* All Lists.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DAFA1832805233E003859C9 /* All Lists.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		1DAFA1762804AEFE003859C9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1DAFA17D2804AF19003859C9 /* Character Details.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Character Details.cpp"; sourceTree = "<group>"; };
 		1DAFA17E2804AF19003859C9 /* Character Details.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "Character Details.hpp"; sourceTree = "<group>"; };
+		1DAFA1802805061E003859C9 /* Character List.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Character List.cpp"; sourceTree = "<group>"; };
+		1DAFA1812805061E003859C9 /* Character List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "Character List.hpp"; sourceTree = "<group>"; };
+		1DAFA1832805233E003859C9 /* All Lists.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "All Lists.cpp"; sourceTree = "<group>"; };
+		1DAFA1842805233F003859C9 /* All Lists.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "All Lists.hpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				1DAFA1762804AEFE003859C9 /* main.cpp */,
+				1DAFA1832805233E003859C9 /* All Lists.cpp */,
+				1DAFA1842805233F003859C9 /* All Lists.hpp */,
 				1DAFA17D2804AF19003859C9 /* Character Details.cpp */,
 				1DAFA17E2804AF19003859C9 /* Character Details.hpp */,
+				1DAFA1802805061E003859C9 /* Character List.cpp */,
+				1DAFA1812805061E003859C9 /* Character List.hpp */,
 			);
 			path = "Final Project CSS";
 			sourceTree = "<group>";
@@ -126,6 +136,8 @@
 			files = (
 				1DAFA1772804AEFE003859C9 /* main.cpp in Sources */,
 				1DAFA17F2804AF19003859C9 /* Character Details.cpp in Sources */,
+				1DAFA1852805233F003859C9 /* All Lists.cpp in Sources */,
+				1DAFA1822805061E003859C9 /* Character List.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
