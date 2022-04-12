@@ -19,10 +19,6 @@ int main(int argc, const char * argv[]) {
     CharactersLists.push_back(Default);
     CharactersLists.push_back(characters("Unknown List"));
     CharactersLists.push_back(characters("Gavin's List"));
-
-
-    
-
     int num;
     bool quiteGame = false;
     int selectList = 0;
@@ -34,7 +30,7 @@ int main(int argc, const char * argv[]) {
         cout << "2. Print Selected Characters"<< endl;
         cout << "3. Create Characters in List Selected"<< endl;
         cout << "5. Quit"<< endl;
-
+        string listName;
         cin >> num;
         switch (num) {
             case 1:{
@@ -44,16 +40,21 @@ int main(int argc, const char * argv[]) {
                     for(int i = 0; i < CharactersLists.size() + 1; i++){
                         if( i == CharactersLists.size()){
                             cout << i << " Create New List" << endl;
-                            string listName;
-                            getline(cin, listName);
-                            CharactersLists.push_back(characters(listName));
+                            
                         }else{
                             cout << i << ". " << CharactersLists[i].getNameList() << endl;
                         }
                     }
                     cin >> selectList;
-                    if( selectList == CharactersLists.size() + 1){
-                        cout << "not coded" << endl;
+                    
+                    if(selectList == CharactersLists.size()){
+                        cin.ignore();
+                        cout << "List Name: ";
+                        getline(cin, listName);
+                        characters x (listName);
+                        x = CharactersLists[0];
+                        CharactersLists.push_back(x);
+                        notSelected = true;
                     }else if(selectList > CharactersLists.size()){
                         selectList = 1;
                         cout << "Try Again" << endl;
@@ -67,7 +68,8 @@ int main(int argc, const char * argv[]) {
                 cout << CharactersLists[selectList];
                 break;
             case 3:
-                cout << "Hmmm";
+                cin.ignore();
+                CharactersLists[selectList].createCharRandom();
                 break;
             case 4:
                 cout << "Hmmm";
