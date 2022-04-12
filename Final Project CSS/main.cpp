@@ -45,22 +45,16 @@ int main(int argc, const char * argv[]) {
                         }else{
                             cout << i << ". " << CharactersLists[i].getNameList() << endl;
                         }
-                        
                     }
                     cin >> selectList;
                     
                     if(selectList == CharactersLists.size()){
-                        char question;
                         cin.ignore();
                         cout << "List Name: ";
                         getline(cin, listName);
-                        characters newList (listName);
-                        cout << "Copy Default List (Y/N)";
-                        cin >> question;
-                        if(question == 'Y' || question == 'y'){
-                            newList = CharactersLists[0];
-                        }
-                        CharactersLists.push_back(newList);
+                        characters x (listName);
+                        x = CharactersLists[0];
+                        CharactersLists.push_back(x);
                         notSelected = true;
                     }else if(selectList > CharactersLists.size()){
                         selectList = 1;
@@ -78,12 +72,9 @@ int main(int argc, const char * argv[]) {
                 cin.ignore();
                 CharactersLists[selectList].createCharRandom();
                 break;
-            case 4:{
-                characters y = CharactersLists[selectList];
-               AttackArea<ChacterDetail> x();
-                cout << y;
+            case 4:
+                cout << "Hmmm";
                 break;
-            }
             case 5:
                 quiteGame = true;
                 break;
