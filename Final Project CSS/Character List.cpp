@@ -7,9 +7,22 @@
 
 #include "Character List.hpp"
 characters::characters(string nameList){
+    if(nameList == "Gavin's List"){
+        gavinsList();
+    }else if(nameList == "Default List"){
         NameList = nameList;
+        Characters.push_back(ChacterDetail("Squirtle", 44, 48, 65, 50, 64, 43));
+        Characters.push_back(ChacterDetail("Ai Hayasaka", 72, 48, 75, 80, 204, 90));
+    }else{
+        NameList = nameList;
+    }
 }
+characters::characters(){
+    Characters.push_back(ChacterDetail("Squirtle", 44, 48, 65, 50, 64, 43));
+    Characters.push_back(ChacterDetail("Ai Hayasaka", 72, 48, 75, 80, 204, 90));
+//ChacterDetail(string Name, int Health, int Defence, int specialAttack, int specialDefence, int Speed, int Damage)
 
+}
 void characters::createChar(){
     string Name;
     int Health;
