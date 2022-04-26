@@ -23,10 +23,10 @@ using namespace std;
 
 class characters{
 public:
-    characters();
     characters(string nameList);
     void createChar();
     void createCharRandom();
+    void createDefault();
     void rename(string name);
     string getNameList();
     void gavinsList();
@@ -38,6 +38,7 @@ public:
 private:
     vector<ChacterDetail> Characters;
     string NameList;
+    
 };
 
 #endif /* Character_List_hpp */

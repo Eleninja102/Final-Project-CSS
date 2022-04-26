@@ -14,7 +14,11 @@
 
 class allList{
 public:
-    
+    allList();
+    void createDefault();
+    void createGavin();
+    void createNew();
+    int printAndSelectList();
     
     
 private:

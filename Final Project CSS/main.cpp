@@ -10,6 +10,7 @@
 #include <time.h>
 #include "Character Details.hpp"
 #include "Character List.hpp"
+#include "AttackArea.hpp"
 
 
 using namespace std;
@@ -77,9 +78,12 @@ int main(int argc, const char * argv[]) {
                 cin.ignore();
                 CharactersLists[selectList].createCharRandom();
                 break;
-            case 4:
-                cout << "Hmmm";
+            case 4:{
+                characters y = CharactersLists[selectList];
+               AttackArea<ChacterDetail> x();
+                cout << y;
                 break;
+            }
             case 5:
                 quiteGame = true;
                 break;

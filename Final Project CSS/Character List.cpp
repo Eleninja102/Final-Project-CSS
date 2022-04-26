@@ -7,22 +7,9 @@
 
 #include "Character List.hpp"
 characters::characters(string nameList){
-    if(nameList == "Gavin's List"){
-        gavinsList();
-    }else if(nameList == "Default List"){
         NameList = nameList;
-        Characters.push_back(ChacterDetail("Squirtle", 44, 48, 65, 50, 64, 43));
-        Characters.push_back(ChacterDetail("Ai Hayasaka", 72, 48, 75, 80, 204, 90));
-    }else{
-        NameList = nameList;
-    }
 }
-characters::characters(){
-    Characters.push_back(ChacterDetail("Squirtle", 44, 48, 65, 50, 64, 43));
-    Characters.push_back(ChacterDetail("Ai Hayasaka", 72, 48, 75, 80, 204, 90));
-//ChacterDetail(string Name, int Health, int Defence, int specialAttack, int specialDefence, int Speed, int Damage)
 
-}
 void characters::createChar(){
     string Name;
     int Health;
@@ -68,7 +55,10 @@ void characters::createChar(){
     cout << "Character Created" << endl;
 
 }
-
+void characters::createDefault(){
+    Characters.push_back(ChacterDetail("Squirtle", 44, 48, 65, 50, 64, 43));
+    Characters.push_back(ChacterDetail("Ai Hayasaka", 72, 48, 75, 80, 204, 90));
+}
 void characters::createCharRandom(){
     cout << "Character Creation Tool" << endl;
     string Name;
