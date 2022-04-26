@@ -75,10 +75,12 @@ int main(int argc, const char * argv[]) {
             case 2:
                 cout << CharactersLists[selectList];
                 break;
-            case 3:
+            case 3:{
                 cin.ignore();
                 CharactersLists[selectList].createCharRandom();
+                cout << endl;
                 break;
+            }
             case 4:{
                 //characters y = ;
                 AttackArea<characters>  varname(CharactersLists[selectList]);

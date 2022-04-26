@@ -44,6 +44,8 @@ private:
     Queue<ChacterDetail> characterList;
     //characters selected2;
     ChacterDetail selected;
+    int winCount = 0;
+    int loseCOunt = 0;
 
 
 };
@@ -80,8 +82,16 @@ AttackArea<Type>::AttackArea(Type somehitng){
 template<class Type>
 void AttackArea<Type>:: attackMode(){
     int selection;
-    while(!characterList.isEmpty() && selected.getHealth() >= 0){
+    while(!characterList.isEmpty()){
         ChacterDetail x = characterList.peek();
+        cout << "Win count: " << winCount << "  Lose count: " << loseCOunt << endl;
+        int c = selected.getDamage();
+        selected.setDamage(c);
+       // cout << "  HP: "<< selected.getHealth() << endl;
+
+        cout << endl << "Next Opponent: ";
+        cout << x.getName() << "   LV: " << x.getLevel();
+        cout << "  HP: "<< x.getHealth() << endl;
         while(x.getHealth() >= 0 && selected.getHealth() >= 0){
             cout << endl;
             cout << x.getName() << "   LV: " << x.getLevel();
@@ -125,6 +135,7 @@ void AttackArea<Type>:: attackMode(){
             }
             if( x.getHealth() <= 0){
                 cout << "It LOST!!" << endl;
+                winCount++;
             }else{
                 int enemy = rand()% 3 + 1;
                 //cout << enemy;
@@ -150,13 +161,13 @@ void AttackArea<Type>:: attackMode(){
                         break;
                 }
             }
+
             if( selected.getHealth() <= 0){
-                cout << "YOU LOST!!"<< endl;
-                //break;
+                cout << "YOU LOST!!"<< endl << endl;
+                loseCOunt++;
+                break;
             }
         }
-        int c = selected.getDamage();
-        selected.setDamage(-c);
         characterList.dequeue();
 
     }
