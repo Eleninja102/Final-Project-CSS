@@ -77,9 +77,11 @@ int main(int argc, const char * argv[]) {
                 cin.ignore();
                 CharactersLists[selectList].createCharRandom();
                 break;
-            case 4:
-                cout << "Hmmm";
+            case 4:{
+                characters y = CharactersLists[selectList];
+               AttackArea<ChacterDetail> x();
                 break;
+            }
             case 5:
                 quiteGame = true;
                 break;
