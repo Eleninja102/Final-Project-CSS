@@ -23,6 +23,7 @@ using namespace std;
 
 class characters{
 public:
+    characters();
     characters(string nameList);
     void createChar();
     void createCharRandom();
