@@ -33,11 +33,12 @@ public:
     void gavinsList();
     friend ostream & operator<< (ostream& os, characters& c);
     characters& operator=(const characters& other);
+    int getSize();
+    vector<ChacterDetail> Characters;
 
     
     
-private:
-    vector<ChacterDetail> Characters;
+protected:
     string NameList;
     
 };

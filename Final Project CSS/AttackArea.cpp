@@ -6,14 +6,3 @@
 //
 
 #include "AttackArea.hpp"
-
-template<class Type>
-AttackArea<Type>::AttackArea(vector<Type> &CharactersLists) {
-    //selected2 = selected;
-    //Characters.push_back(ChacterDetail("Squirtle", 44, 48, 65, 50, 64, 43));
-
-    for(int i = 0; i < CharactersLists.size(); i++){
-        characterList.enqueue(CharactersLists[i]);
-    }
-    
-}

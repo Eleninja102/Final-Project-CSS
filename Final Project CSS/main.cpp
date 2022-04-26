@@ -30,6 +30,8 @@ int main(int argc, const char * argv[]) {
         cout << "1. Select Character List"<< endl;
         cout << "2. Print Selected Characters"<< endl;
         cout << "3. Create Characters in List Selected"<< endl;
+        cout << "4. Attack Mode"<< endl;
+
         cout << "5. Quit"<< endl;
         string listName;
         cin >> num;
@@ -78,8 +80,10 @@ int main(int argc, const char * argv[]) {
                 CharactersLists[selectList].createCharRandom();
                 break;
             case 4:{
-                characters y = CharactersLists[selectList];
-               AttackArea<ChacterDetail> x();
+                //characters y = ;
+                AttackArea<characters>  varname(CharactersLists[selectList]);
+                //cout << CharactersLists[selectList];
+                varname.attackMode();
                 break;
             }
             case 5:

@@ -131,3 +131,8 @@ characters &characters::operator=(const characters &other) {
     Characters = other.Characters;
     return *this;
 }
+
+
+int characters::getSize(){
+    return Characters.size();
+}
