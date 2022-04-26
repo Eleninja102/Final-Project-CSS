@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4B358A28164AF5004CDA4D /* AttackArea.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B358828164AF5004CDA4D /* AttackArea.cpp */; };
 		1DAFA1772804AEFE003859C9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DAFA1762804AEFE003859C9 /* main.cpp */; };
 		1DAFA17F2804AF19003859C9 /* Character Details.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DAFA17D2804AF19003859C9 /* Character Details.cpp */; };
 		1DAFA1822805061E003859C9 /* Character List.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DAFA1802805061E003859C9 /* Character List.cpp */; };
@@ -26,6 +27,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D4B358728164712004CDA4D /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		1D4B358828164AF5004CDA4D /* AttackArea.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AttackArea.cpp; sourceTree = "<group>"; };
+		1D4B358928164AF5004CDA4D /* AttackArea.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AttackArea.hpp; sourceTree = "<group>"; };
 		1DAFA1732804AEFE003859C9 /* Final Project CSS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Final Project CSS"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DAFA1762804AEFE003859C9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1DAFA17D2804AF19003859C9 /* Character Details.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Character Details.cpp"; sourceTree = "<group>"; };
@@ -67,6 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				1DAFA1762804AEFE003859C9 /* main.cpp */,
+				1D4B358728164712004CDA4D /* Queue.h */,
+				1D4B358828164AF5004CDA4D /* AttackArea.cpp */,
+				1D4B358928164AF5004CDA4D /* AttackArea.hpp */,
 				1DAFA1832805233E003859C9 /* All Lists.cpp */,
 				1DAFA1842805233F003859C9 /* All Lists.hpp */,
 				1DAFA17D2804AF19003859C9 /* Character Details.cpp */,
@@ -137,6 +144,7 @@
 				1DAFA1772804AEFE003859C9 /* main.cpp in Sources */,
 				1DAFA17F2804AF19003859C9 /* Character Details.cpp in Sources */,
 				1DAFA1852805233F003859C9 /* All Lists.cpp in Sources */,
+				1D4B358A28164AF5004CDA4D /* AttackArea.cpp in Sources */,
 				1DAFA1822805061E003859C9 /* Character List.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

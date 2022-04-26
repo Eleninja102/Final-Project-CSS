@@ -20,6 +20,7 @@ using namespace std;
 
 class ChacterDetail{
 public:
+    ChacterDetail();
     ChacterDetail(string Name, int Health, int Defence, int specialAttack, int specialDefence, int Speed, int Damage);
     ChacterDetail(string Name, int Health, int Defence, int specialAttack, int specialDefence, int Speed, int Damage, int Level);
     int getHealth();
@@ -30,12 +31,16 @@ public:
     int getSpecialDefence();
     int getSpeed();
     int getAttack();
+    void setDamage(int x);
+    int getDamage();
+
     string getName();
     void newName(string rename);
     friend ostream & operator<< (ostream& os, ChacterDetail& c);
     void setLevel(int level);
     void incrementLevel();
-    
+    ChacterDetail& operator=(const ChacterDetail& other2);
+
 
     
 private:
@@ -45,10 +50,10 @@ private:
     int specialAttack;
     int specialDefence;
     int Speed;
-    int Damage;
+    int Damage = 0;
     int Level;
     map <string, int> IV = {
-        {"health", rand()% 32},
+        {"health",0},
         {"attack", rand()% 32},
         {"defence", rand()% 32},
         {"specialAttack", rand()% 32},

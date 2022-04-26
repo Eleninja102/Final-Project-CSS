@@ -10,6 +10,7 @@
 #include <time.h>
 #include "Character Details.hpp"
 #include "Character List.hpp"
+#include "AttackArea.hpp"
 
 
 using namespace std;
@@ -29,6 +30,8 @@ int main(int argc, const char * argv[]) {
         cout << "1. Select Character List"<< endl;
         cout << "2. Print Selected Characters"<< endl;
         cout << "3. Create Characters in List Selected"<< endl;
+        cout << "4. Attack Mode"<< endl;
+
         cout << "5. Quit"<< endl;
         string listName;
         cin >> num;
@@ -44,7 +47,6 @@ int main(int argc, const char * argv[]) {
                         }else{
                             cout << i << ". " << CharactersLists[i].getNameList() << endl;
                         }
-                        
                     }
                     cin >> selectList;
                     
@@ -73,13 +75,19 @@ int main(int argc, const char * argv[]) {
             case 2:
                 cout << CharactersLists[selectList];
                 break;
-            case 3:
+            case 3:{
                 cin.ignore();
                 CharactersLists[selectList].createCharRandom();
+                cout << endl;
                 break;
-            case 4:
-                cout << "Hmmm";
+            }
+            case 4:{
+                //characters y = ;
+                AttackArea<characters>  varname(CharactersLists[selectList]);
+                //cout << CharactersLists[selectList];
+                varname.attackMode();
                 break;
+            }
             case 5:
                 quiteGame = true;
                 break;

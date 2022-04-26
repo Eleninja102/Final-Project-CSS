@@ -6,6 +6,8 @@
 //
 
 #include "Character Details.hpp"
+ChacterDetail::ChacterDetail(){
+}
 ChacterDetail::ChacterDetail(string Name, int Health, int Defence, int specialAttack, int specialDefence, int Speed, int Damage){
     this->Name = Name;
     this->Health = Health;
@@ -13,7 +15,7 @@ ChacterDetail::ChacterDetail(string Name, int Health, int Defence, int specialAt
     this->specialAttack = specialAttack;
     this->specialDefence = specialDefence;
     this->Speed = Speed;
-    this->Damage = Damage;
+    this->Damage = 0;
     this->Level = 1;
 }
 
@@ -24,7 +26,7 @@ ChacterDetail::ChacterDetail(string Name, int Health, int Defence, int specialAt
     this->specialAttack = specialAttack;
     this->specialDefence = specialDefence;
     this->Speed = Speed;
-    this->Damage = Damage;
+    this->Damage = 0;
     this->Level = Level;
 }
 
@@ -32,7 +34,7 @@ ChacterDetail::ChacterDetail(string Name, int Health, int Defence, int specialAt
 int ChacterDetail::getHealth() {
     int IV2 = IV["health"];
     int num = 2*Health + IV2 + rand()% 64 + 10;
-    return (floor(0.01*(num)*Level)) + Level + 10;
+    return (floor(0.01*(num)*Level)) + Level + 10 + Damage;
 }
 
 int ChacterDetail::getLevel() { 
@@ -91,4 +93,23 @@ void ChacterDetail::setLevel(int level){
 }
 void ChacterDetail::incrementLevel(){
     Level++;
+}
+
+void ChacterDetail::setDamage(int x){
+    Damage -= x;
+}
+int ChacterDetail::getDamage(){
+    return Damage;
+}
+ChacterDetail &ChacterDetail::operator=(const ChacterDetail &other2) {
+    Name = other2.Name;
+   // string Name;
+    Health = other2.Health;
+    Defence = other2.Defence;
+    specialAttack = other2.specialAttack;
+    specialDefence = other2.specialDefence;
+    Speed = other2.Speed;
+    Damage = other2.Damage;
+    Level = other2.Level;
+    return *this;
 }

@@ -27,17 +27,20 @@ public:
     characters(string nameList);
     void createChar();
     void createCharRandom();
+    void createDefault();
     void rename(string name);
     string getNameList();
     void gavinsList();
     friend ostream & operator<< (ostream& os, characters& c);
     characters& operator=(const characters& other);
+    int getSize();
+    vector<ChacterDetail> Characters;
 
     
     
-private:
-    vector<ChacterDetail> Characters;
+protected:
     string NameList;
+    
 };
 
 #endif /* Character_List_hpp */

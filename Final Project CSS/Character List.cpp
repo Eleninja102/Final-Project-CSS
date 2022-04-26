@@ -68,7 +68,10 @@ void characters::createChar(){
     cout << "Character Created" << endl;
 
 }
-
+void characters::createDefault(){
+    Characters.push_back(ChacterDetail("Squirtle", 44, 48, 65, 50, 64, 43));
+    Characters.push_back(ChacterDetail("Ai Hayasaka", 72, 48, 75, 80, 204, 90));
+}
 void characters::createCharRandom(){
     cout << "Character Creation Tool" << endl;
     string Name;
@@ -127,4 +130,9 @@ ostream & operator<< (ostream& os, characters& c){
 characters &characters::operator=(const characters &other) {
     Characters = other.Characters;
     return *this;
+}
+
+
+int characters::getSize(){
+    return Characters.size();
 }
